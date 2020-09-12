@@ -9,18 +9,6 @@ const MovieCard = ({ title }) => {
   image_url = image.width === 0 ? noImage : image_url
 
   return (
-    // <div className="card">
-    //   <div className="image">
-    //     <Link to={`/movie/${title}`}>
-    //       <img className="ui medium bordered image" src={noImage} alt="movies" />
-    //     </Link>
-    //   </div>
-    //   <Link to={`/movie/${title}`} className="card-link">
-    //     <div className="extra">
-    //       { title }
-    //     </div>
-    //   </Link>
-    // </div>
     <div className="column">
       <div className="image">
         <Link to={`/movie/${title}`}>
