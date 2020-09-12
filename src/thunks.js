@@ -29,7 +29,7 @@ export const loadMovies = () => async dispatch => {
 export const loadMovieDetails = movie => async dispatch => {
   try {
     dispatch(loadMovieDetailsInProgress())
-    const res = await axios.get(`http://www.omdbapi.com/?apikey=3aa24b63&t=${movie}`)
+    const res = await axios.get(`https://www.omdbapi.com/?apikey=3aa24b63&t=${movie}`)
     const movieDetails = await res.data
 
     // console.log(movieDetails)

@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 import noImage from '../images/noImage.png'
 
 const MovieCard = ({ title }) => {
-  // let image = new Image()
-  // let image_url = `/images/${title}.jpg`
-  // image.src = image_url
-  // image_url = image.width === 0 ? noImage : image_url
+  let image = new Image()
+  let image_url = `/images/${title}.jpg`
+  image.src = image_url
+  image_url = image.width === 0 ? noImage : image_url
 
   return (
     <div className="column">
