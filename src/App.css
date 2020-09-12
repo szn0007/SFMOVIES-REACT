@@ -1,38 +1,142 @@
-.App {
+@media only screen and (max-width: 768px) {
+  div.right div.search,div.right div.input{
+    width: 100%;
+  }
+}
+
+div.result{
+  position: absolute;
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 1;
+  border: 1px solid #efefef;
+  border-radius: 20px;
+  margin-top: 5px;
+  max-height: 300px;
+  min-height: 100px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+div.result ul {
+  color: #333;
+  margin: 5px;
+  padding: 0;
+}
+div.result ul li{
+  list-style: none;
+  padding: 5px;
+  border-bottom: 1px solid #efefef;
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+div.result ul li:last-child{
+  border-bottom: none;
+}
+div.result ul li:hover, div.result ul li:focus, div.result ul li:active {
+  cursor: pointer;
+  background-color: #efefef;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.span-icon{
+  position: absolute;
+  right: 10px;
+  top: 12px;
+}
+.card{
+  cursor: pointer;
+}
+.menu-item-link{
+  padding: 4px 14px;
+  color:rgba(0,0,0,.4);
+  border-bottom: 1px solid #efefef;
+}
+.card-link{
+  padding: 10px 14px;
+  color:rgba(0,0,0,.4);
+}
+.card-link1{
+  padding: 10px 14px;
   text-align: center;
+  color:rgba(0,0,0,.4);
+}
+.card-link:hover, .card-link1:hover{
+  color:rgba(0,0,0,.4);
+}
+.movie-image{
+  max-width: 203px;
+  max-height: 203px;
+  min-height: 203px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* Movie Details */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.movie-details-container{
+  width: 100%;
+  position: relative;
+}
+.google-map{
+  width: 75%;
+  height: 90vh;
+  float: left;
+  background-color: #efefef;
+}
+.movie-details{
+  width: 25%;
+  height: 90vh;
+  float: left;
+  background-color: aliceblue;
+  overflow: auto; 
+}
+@media only screen and (max-width: 768px) {
+  .google-map{
+    width: 70%;
+  }
+  .movie-details{
+    width: 30%;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 450px) {
+  .google-map{
+    width: 50%;
   }
-  to {
-    transform: rotate(360deg);
+  .movie-details{
+    width: 50%;
   }
+}
+div.movie-poster{
+  width: 100%;
+  height: 250px;
+}
+div.movie-poster img{
+  width: 100%;
+  height: 250px;
+}
+div.movie-details .movie-details-top, div.movie-details-top .header{
+  margin: 0px !important;
+  padding: 5px;
+  background-color: #607D8B;
+  color: #ffffff;
+}
+span.genre{
+  color: #ACBCC3;
+  padding: 0px 5px;
+  display: block;
+}
+.movie-details-main .header{
+  margin:0px;
+}
+.location-item:hover{
+  cursor: pointer;
+  background-color: #efefef;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
