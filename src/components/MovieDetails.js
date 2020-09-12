@@ -98,19 +98,6 @@ const MovieDetails = ({ match, getMovieDetailsDispatch, isLoading, movieDetails,
           </div>
 
           <h3 className="ui top attached header">
-            Ratings
-          </h3>
-          <div className="ui attached segment">
-            <div className="ui list">
-              {
-                movieDetails.Ratings.map((rating, index) => (
-                  <div className="item" key={index}><b>{`${rating.Source} : `}</b> {rating.Value}</div>
-                ))
-              }
-            </div>
-          </div>
-
-          <h3 className="ui top attached header">
             Filming Locations
           </h3>
           <div className="ui attached segment">
