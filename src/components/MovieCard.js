@@ -6,14 +6,13 @@ const MovieCard = ({ title }) => {
   let image = new Image()
   let image_url = `/images/${title}.jpg`
   image.src = image_url
-  console.log(image)
-  image_url = image.width === 0 ? noImage : image_url
+  image_url = image && image.width === 0 ? noImage : image_url
 
   return (
     <div className="column">
       <div className="image">
         <Link to={`/movie/${title}`}>
-          <img className="ui medium bordered image movie-image" src={noImage} alt="movies" />
+          <img className="ui medium bordered image movie-image" src={image_url} alt="movies" />
         </Link>
       </div>
       <Link to={`/movie/${title}`} className="card-link1">
