@@ -1,5 +1,5 @@
 ## SFMOVIES CODING CHALLENGE
-Project Demo: https://master.d254tlo2iiyf3z.amplifyapp.com/
+Project Demo: https://master.d348t8b81a7o0l.amplifyapp.com/
 
 This web applcation shows on a map where movies have been filmed in San Francisco.
 
