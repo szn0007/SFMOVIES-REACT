@@ -5,7 +5,7 @@ import { getMoviesLoading, getMovieDetails, getMovieLocations } from '../selecto
 import MapComponent from "./MapComponent"
 import Geocode from "react-geocode";
 
-Geocode.setApiKey("AIzaSyAsVqGaG2rtDG3k8Tuq_8bnqlNhh1adQwM");
+Geocode.setApiKey("AIzaSyAoZclWwCdkcgbN2vbyLVbBCKQxMGe6J48");
 Geocode.setRegion("us");
 
 const MovieDetails = ({ match, getMovieDetailsDispatch, isLoading, movieDetails, movieLocations }) => {
@@ -60,7 +60,7 @@ const MovieDetails = ({ match, getMovieDetailsDispatch, isLoading, movieDetails,
       <div className="google-map">
         <MapComponent
           isMarkerShown
-          googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyAsVqGaG2rtDG3k8Tuq_8bnqlNhh1adQwM"
+          googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyAoZclWwCdkcgbN2vbyLVbBCKQxMGe6J48"
           loadingElement={<div style={{ height: `100%` }} />}
           containerElement={<div style={{ height: `100%` }} />}
           mapElement={<div style={{ height: `100%` }} />}
