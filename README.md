@@ -47,12 +47,36 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+## Project Description
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+In this Application Users Can:
+1. Search the movie name and find the location, where that movie had been filmed in San Francisco. Data is fetched from https://data.sfgov.org/resource/yitu-d5am.json
+2. Search has autocomplete feature to help users find the film more conviniently.
+3. Users can select the film from autocomplete list.
+4. When selected, movie details page is loaded. On the left side of the page, google map is rendered.Markers are seen in google map. Each marker represents the location where the movie was filmed. And the Markers are clickable as well. When clicked, it shows an info window with movie title and location name.
+5. Movie details are also shown on the right sidebar. Movie poster, plot, facts and details and list of location where movie is filmed are listed.The list are clickable as well and when clicked google maps show that exact location marker.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Project Structure
+~> SFMOVIES
+|-- public (Where static files are stored)
+|   |-- images
+|   |-- index.html (file served to user browser)
+|-- src (Main source folder)
+|   |-- App.js
+|   |-- App.css (Main css file used in this project)
+|   |-- index.js
+|   |-- selectors.js (To return data in different form after taking state as an argument)
+|   |-- thunks.js (Handling asynchronous actions)
+|   |-- components
+|   |   |-- LandingPage.js (Component that shows list of movies retrieved from DataSF api)
+|   |   |-- NavBar.js (Component that has search functionality)
+|   |   |-- MovieDetails.js (Component that shows map and movie details. Move details is retreived from another api by passing movie title)
+|   |   |-- MovieCard.js (Re-usable component that shows movie poster and movie name. On clicked movie details page is routed)
+|   |   |-- MapComponent.js (Component whose sole purpose is to render google map)
+|   |-- store
+|   |   |-- actions.js (All the actions to be dispatched)
+|   |   |-- reducers.js (uses action to determine state change)
+|   |   |-- store.js (redux store configuration)
+|   |-- tests
+|   |   |-- thunks.test.js (thunk test)
+|-- package.json
